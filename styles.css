@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px; /* Apple Body baseline */
 }
 
 body {
@@ -131,8 +131,8 @@ img { display: block; max-width: 100%; }
 
 .loader-sub {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   color: var(--white-dim);
   text-transform: uppercase;
 }
@@ -171,8 +171,8 @@ img { display: block; max-width: 100%; }
 .nav-logo {
   font-family: var(--font-heading);
   font-weight: 200;
-  font-size: 1rem;
-  letter-spacing: 0.25em;
+  font-size: var(--type-headline);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   transition: opacity var(--transition-fast);
 }
@@ -191,8 +191,8 @@ img { display: block; max-width: 100%; }
 
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  font-size: var(--type-footnote);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   position: relative;
@@ -282,9 +282,9 @@ img { display: block; max-width: 100%; }
 
 .mobile-link {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 7vw, 2.8rem);
+  font-size: clamp(1.4rem, 6vw, 2.2rem);
   font-weight: 100;
-  letter-spacing: 0.25em;
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   transition: color var(--transition-fast), transform var(--transition-med);
@@ -365,10 +365,27 @@ img { display: block; max-width: 100%; }
 /* ============================================
    SECTION LABELS & HEADINGS
    ============================================ */
+
+/* Apple type scale custom properties */
+:root {
+  --type-large-title: 2rem;      /* ~34px — Large Title */
+  --type-title1:      1.647rem;  /* ~28px — Title 1    */
+  --type-title2:      1.294rem;  /* ~22px — Title 2    */
+  --type-title3:      1.176rem;  /* ~20px — Title 3    */
+  --type-headline:    1rem;      /* ~17px — Headline   */
+  --type-body:        1rem;      /* ~17px — Body       */
+  --type-callout:     0.941rem;  /* ~16px — Callout    */
+  --type-subhead:     0.882rem;  /* ~15px — Subhead    */
+  --type-footnote:    0.765rem;  /* ~13px — Footnote   */
+  --type-caption1:    0.706rem;  /* ~12px — Caption 1  */
+  --type-caption2:    0.647rem;  /* ~11px — Caption 2  */
+  --heading-spacing:  0.3em;     /* Universal heading tracking */
+}
+
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   margin-bottom: 16px;
@@ -377,8 +394,8 @@ img { display: block; max-width: 100%; }
 .section-heading {
   font-family: var(--font-heading);
   font-weight: 200;
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  letter-spacing: 0.22em;
+  font-size: var(--type-large-title);
+  letter-spacing: var(--heading-spacing);
   line-height: 1.15;
   text-transform: uppercase;
   margin-bottom: 64px;
@@ -419,8 +436,8 @@ img { display: block; max-width: 100%; }
 
 .hero-tag {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-footnote);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   margin-bottom: 24px;
@@ -429,18 +446,18 @@ img { display: block; max-width: 100%; }
 .hero-name {
   font-family: var(--font-heading);
   font-weight: 100;
-  font-size: clamp(3rem, 9vw, 8rem);
-  letter-spacing: 0.18em;
-  line-height: 1;
+  font-size: clamp(2rem, 8vw, 6rem);
+  letter-spacing: var(--heading-spacing);
+  line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
 
 .hero-location {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--type-subhead);
   color: var(--white-dim);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--heading-spacing);
   margin-bottom: 48px;
 }
 
@@ -452,8 +469,8 @@ img { display: block; max-width: 100%; }
 
 .btn-primary {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-footnote);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   padding: 14px 32px;
   background: var(--white);
@@ -471,8 +488,8 @@ img { display: block; max-width: 100%; }
 
 .btn-ghost {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-footnote);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   padding: 14px 32px;
   background: transparent;
@@ -498,8 +515,8 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 12px;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-size: var(--type-caption2);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   animation: scrollBounce 2s ease-in-out infinite;
@@ -545,7 +562,7 @@ img { display: block; max-width: 100%; }
 .about-text p {
   color: var(--white-dim);
   margin-bottom: 20px;
-  font-size: 0.95rem;
+  font-size: var(--type-body);
   line-height: 1.85;
 }
 
@@ -572,15 +589,16 @@ img { display: block; max-width: 100%; }
 
 .stat-number {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 2.4rem;
-  letter-spacing: -0.04em;
+  font-weight: 200;
+  font-size: var(--type-title1);
+  letter-spacing: var(--heading-spacing);
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .stat-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
 }
@@ -614,17 +632,17 @@ img { display: block; max-width: 100%; }
 
 .skill-icon {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-caption1);
   color: var(--white-dim);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   white-space: nowrap;
 }
 
 .skill-card-header h3 {
   font-family: var(--font-heading);
-  font-weight: 300;
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
+  font-weight: 200;
+  font-size: var(--type-title3);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
 }
 
@@ -636,8 +654,8 @@ img { display: block; max-width: 100%; }
 
 .tag {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  font-size: var(--type-caption1);
+  letter-spacing: 0.08em;
   padding: 5px 10px;
   border: 1px solid var(--white-border);
   color: var(--white-dim);
@@ -700,16 +718,16 @@ img { display: block; max-width: 100%; }
 
 .timeline-period {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
 }
 
 .timeline-company {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   padding: 3px 10px;
   border: 1px solid var(--white-border);
@@ -718,9 +736,9 @@ img { display: block; max-width: 100%; }
 
 .timeline-role {
   font-family: var(--font-heading);
-  font-weight: 300;
-  font-size: 1.1rem;
-  letter-spacing: 0.14em;
+  font-weight: 200;
+  font-size: var(--type-title2);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -732,7 +750,7 @@ img { display: block; max-width: 100%; }
 }
 
 .timeline-content li {
-  font-size: 0.88rem;
+  font-size: var(--type-callout);
   color: var(--white-dim);
   padding-left: 16px;
   position: relative;
@@ -769,8 +787,8 @@ img { display: block; max-width: 100%; }
 
 .ngo-badge {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   padding: 4px 10px;
   border: 1px solid var(--white);
@@ -779,31 +797,31 @@ img { display: block; max-width: 100%; }
 
 .ngo-period {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-caption1);
   color: var(--white-dim);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--heading-spacing);
 }
 
 .ngo-card h3 {
   font-family: var(--font-heading);
   font-weight: 200;
-  font-size: 2rem;
-  letter-spacing: 0.22em;
+  font-size: var(--type-title1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .ngo-card p {
   color: var(--white-dim);
-  font-size: 0.9rem;
+  font-size: var(--type-callout);
   line-height: 1.85;
   margin-bottom: 28px;
 }
 
 .ngo-link {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  font-size: var(--type-footnote);
+  letter-spacing: var(--heading-spacing);
   color: var(--white);
   border-bottom: 1px solid var(--white-border);
   padding-bottom: 2px;
@@ -850,16 +868,16 @@ img { display: block; max-width: 100%; }
 
 .project-index {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-size: var(--type-caption2);
+  letter-spacing: var(--heading-spacing);
   color: rgba(255,255,255,0.2);
   margin-bottom: 16px;
 }
 
 .project-tech {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   color: var(--white-dim);
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -868,22 +886,22 @@ img { display: block; max-width: 100%; }
 .project-card h3 {
   font-family: var(--font-heading);
   font-weight: 200;
-  font-size: 1.5rem;
-  letter-spacing: 0.18em;
+  font-size: var(--type-title2);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .project-sub {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--type-subhead);
   color: var(--white-dim);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--heading-spacing);
   margin-bottom: 16px;
 }
 
 .project-card p:last-child {
-  font-size: 0.86rem;
+  font-size: var(--type-callout);
   color: var(--white-dim);
   line-height: 1.75;
 }
@@ -913,9 +931,9 @@ img { display: block; max-width: 100%; }
 
 .leadership-icon {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-caption1);
   color: var(--white-dim);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   white-space: nowrap;
   margin-top: 4px;
   flex-shrink: 0;
@@ -923,15 +941,15 @@ img { display: block; max-width: 100%; }
 
 .leadership-item h3 {
   font-family: var(--font-heading);
-  font-weight: 300;
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
+  font-weight: 200;
+  font-size: var(--type-title3);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .leadership-item p {
-  font-size: 0.85rem;
+  font-size: var(--type-callout);
   color: var(--white-dim);
   line-height: 1.7;
 }
@@ -957,8 +975,8 @@ img { display: block; max-width: 100%; }
 
 .edu-year {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
+  font-size: var(--type-caption1);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
   margin-bottom: 16px;
@@ -967,8 +985,8 @@ img { display: block; max-width: 100%; }
 .edu-card h3 {
   font-family: var(--font-heading);
   font-weight: 200;
-  font-size: 1rem;
-  letter-spacing: 0.16em;
+  font-size: var(--type-title3);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 10px;
   line-height: 1.4;
@@ -976,9 +994,9 @@ img { display: block; max-width: 100%; }
 
 .edu-institution {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--type-subhead);
   color: var(--white-dim);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--heading-spacing);
 }
 
 /* ============================================
@@ -1007,15 +1025,15 @@ img { display: block; max-width: 100%; }
 
 .contact-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: var(--type-caption2);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   color: var(--white-dim);
 }
 
 .contact-value {
   font-family: var(--font-mono);
-  font-size: 0.88rem;
+  font-size: var(--type-subhead);
   color: var(--white);
   transition: color var(--transition-fast);
   word-break: break-word;
@@ -1033,16 +1051,16 @@ a.contact-value:hover {
 
 .refs-title {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-weight: 200;
+  font-size: var(--type-title3);
+  letter-spacing: var(--heading-spacing);
   text-transform: uppercase;
   margin-bottom: 16px;
   color: var(--white);
 }
 
 .contact-refs p {
-  font-size: 0.82rem;
+  font-size: var(--type-footnote);
   color: var(--white-dim);
   margin-bottom: 8px;
   line-height: 1.6;
@@ -1078,9 +1096,9 @@ a.contact-value:hover {
 
 .footer p {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--type-footnote);
   color: var(--white-dim);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--heading-spacing);
 }
 
 .footer-sub {
@@ -1116,12 +1134,12 @@ a.contact-value:hover {
   .nav-inner { padding: 0 20px; }
 
   .section-heading {
-    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-size: var(--type-large-title);
     margin-bottom: 40px;
   }
 
   .hero-name {
-    font-size: clamp(2.8rem, 13vw, 5rem);
+    font-size: clamp(1.8rem, 10vw, 3.5rem);
   }
 
   .hero-content { padding: 0 20px; }
