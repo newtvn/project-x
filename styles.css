@@ -7,7 +7,7 @@
   --white-dim: rgba(255, 255, 255, 0.6);
   --white-faint: rgba(255, 255, 255, 0.1);
   --white-border: rgba(255, 255, 255, 0.12);
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-heading: 'Josefin Sans', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
   --nav-h: 64px;
   --transition-fast: 0.2s ease;
@@ -91,10 +91,11 @@ img { display: block; max-width: 100%; }
 
 .loader-text {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(3rem, 10vw, 8rem);
-  letter-spacing: -0.02em;
+  font-weight: 100;
+  font-size: clamp(2.5rem, 9vw, 7rem);
+  letter-spacing: 0.3em;
   line-height: 1;
+  text-transform: uppercase;
   overflow: hidden;
 }
 
@@ -169,9 +170,10 @@ img { display: block; max-width: 100%; }
 
 .nav-logo {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   transition: opacity var(--transition-fast);
 }
 
@@ -280,9 +282,10 @@ img { display: block; max-width: 100%; }
 
 .mobile-link {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 8vw, 3rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 7vw, 2.8rem);
+  font-weight: 100;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   color: var(--white-dim);
   transition: color var(--transition-fast), transform var(--transition-med);
   display: inline-block;
@@ -373,10 +376,11 @@ img { display: block; max-width: 100%; }
 
 .section-heading {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-weight: 200;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  letter-spacing: 0.22em;
+  line-height: 1.15;
+  text-transform: uppercase;
   margin-bottom: 64px;
 }
 
@@ -424,10 +428,11 @@ img { display: block; max-width: 100%; }
 
 .hero-name {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(3.5rem, 10vw, 9rem);
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  font-weight: 100;
+  font-size: clamp(3rem, 9vw, 8rem);
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
   margin-bottom: 32px;
 }
 
@@ -617,9 +622,10 @@ img { display: block; max-width: 100%; }
 
 .skill-card-header h3 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .skill-tags {
@@ -712,9 +718,10 @@ img { display: block; max-width: 100%; }
 
 .timeline-role {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   margin-bottom: 14px;
 }
 
@@ -779,9 +786,10 @@ img { display: block; max-width: 100%; }
 
 .ngo-card h3 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 200;
   font-size: 2rem;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
@@ -859,9 +867,10 @@ img { display: block; max-width: 100%; }
 
 .project-card h3 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: -0.03em;
+  font-weight: 200;
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   margin-bottom: 6px;
 }
 
@@ -914,9 +923,10 @@ img { display: block; max-width: 100%; }
 
 .leadership-item h3 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   margin-bottom: 6px;
 }
 
@@ -956,11 +966,12 @@ img { display: block; max-width: 100%; }
 
 .edu-card h3 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: -0.01em;
+  font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   margin-bottom: 10px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .edu-institution {
