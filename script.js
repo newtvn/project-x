@@ -1,223 +1,161 @@
 /* ============================================
-   LOADER
+   LOADER  (only present on index.html)
    ============================================ */
 const loaderSteps = [
-  { text: 'N', sub: 'Initializing...' },
-  { text: 'NB', sub: 'Loading Assets...' },
-  { text: 'NBN', sub: 'Building UI...' },
-  { text: 'Newton', sub: 'Almost Ready...' },
-  { text: 'Newton Brian', sub: 'Finalizing...' },
-  { text: 'Newton Brian Nyongesa', sub: 'Welcome.' },
+  { text: 'N',                    sub: 'Initializing...'  },
+  { text: 'NB',                   sub: 'Loading Assets...' },
+  { text: 'NBN',                  sub: 'Building UI...'    },
+  { text: 'Newton',               sub: 'Almost Ready...'   },
+  { text: 'Newton Brian',         sub: 'Finalizing...'     },
+  { text: 'Newton Brian Nyongesa',sub: 'Welcome.'          },
 ];
 
+const loaderEl   = document.getElementById('loader');
 const loaderName = document.getElementById('loaderName');
-const loaderSub = document.getElementById('loaderSub');
-const loaderProgress = document.getElementById('loaderProgress');
-const loader = document.getElementById('loader');
-const main = document.getElementById('main');
+const loaderSub  = document.getElementById('loaderSub');
+const loaderProg = document.getElementById('loaderProgress');
 
-let stepIndex = 0;
-let progress = 0;
+if (loaderEl) {
+  let stepIdx = 0;
+  let progress = 0;
 
-function advanceLoader() {
-  if (stepIndex >= loaderSteps.length) return;
+  function advanceLoader() {
+    if (stepIdx >= loaderSteps.length) return;
+    const step   = loaderSteps[stepIdx];
+    const target = Math.round(((stepIdx + 1) / loaderSteps.length) * 100);
 
-  const step = loaderSteps[stepIndex];
-  const targetProgress = Math.round(((stepIndex + 1) / loaderSteps.length) * 100);
+    loaderName.style.opacity   = '0';
+    loaderName.style.transform = 'translateY(-8px)';
 
-  // Morph text with a brief flicker
-  loaderName.style.opacity = '0';
-  loaderName.style.transform = 'translateY(-8px)';
-
-  setTimeout(() => {
-    loaderName.textContent = step.text;
-    loaderSub.textContent = step.sub;
-    loaderName.style.transition = 'opacity 0.35s ease, transform 0.35s cubic-bezier(0.23,1,0.32,1)';
-    loaderName.style.opacity = '1';
-    loaderName.style.transform = 'translateY(0)';
-  }, 180);
-
-  // Animate progress bar
-  animateProgress(progress, targetProgress, 300);
-  progress = targetProgress;
-  stepIndex++;
-}
-
-function animateProgress(from, to, duration) {
-  const start = performance.now();
-  function update(now) {
-    const elapsed = now - start;
-    const t = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - t, 3);
-    const current = from + (to - from) * eased;
-    loaderProgress.style.width = current + '%';
-    if (t < 1) requestAnimationFrame(update);
-  }
-  requestAnimationFrame(update);
-}
-
-function runLoader() {
-  advanceLoader(); // Step 1 immediately
-
-  const intervals = [300, 350, 400, 500, 600];
-  intervals.forEach((delay, i) => {
     setTimeout(() => {
-      advanceLoader();
-      if (i === intervals.length - 1) {
-        // Final step — dismiss loader
-        setTimeout(dismissLoader, 600);
-      }
-    }, intervals.slice(0, i + 1).reduce((a, b) => a + b, 0));
-  });
-}
+      loaderName.textContent     = step.text;
+      loaderSub.textContent      = step.sub;
+      loaderName.style.transition = 'opacity 0.35s ease, transform 0.35s cubic-bezier(0.23,1,0.32,1)';
+      loaderName.style.opacity   = '1';
+      loaderName.style.transform = 'translateY(0)';
+    }, 180);
 
-function dismissLoader() {
-  loader.classList.add('fade-out');
-  main.classList.remove('hidden');
-  // Tiny delay before showing main so transition is smooth
-  setTimeout(() => {
-    main.classList.add('visible');
-    loader.style.display = 'none';
-  }, 800);
+    animProgress(progress, target, 300);
+    progress = target;
+    stepIdx++;
+  }
+
+  function animProgress(from, to, dur) {
+    const t0 = performance.now();
+    function step(now) {
+      const t  = Math.min((now - t0) / dur, 1);
+      const e  = 1 - Math.pow(1 - t, 3);
+      loaderProg.style.width = (from + (to - from) * e) + '%';
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function runLoader() {
+    advanceLoader();
+    const delays = [300, 350, 400, 500, 600];
+    let acc = 0;
+    delays.forEach((d, i) => {
+      acc += d;
+      setTimeout(() => {
+        advanceLoader();
+        if (i === delays.length - 1) {
+          setTimeout(dismissLoader, 600);
+        }
+      }, acc);
+    });
+  }
+
+  function dismissLoader() {
+    loaderEl.classList.add('fade-out');
+    setTimeout(() => { loaderEl.style.display = 'none'; }, 800);
+  }
+
+  runLoader();
 }
 
 /* ============================================
-   NAVIGATION SCROLL STATE
+   NAV — scroll background
    ============================================ */
 const navbar = document.getElementById('navbar');
-
-function handleNavScroll() {
-  if (window.scrollY > 40) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+if (navbar) {
+  function handleScroll() {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
   }
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 }
 
-window.addEventListener('scroll', handleNavScroll, { passive: true });
+/* ============================================
+   NAV — active link for current page
+   ============================================ */
+(function markActive() {
+  const path  = window.location.pathname.split('/').pop() || 'index.html';
+  const links = document.querySelectorAll('.nav-link, .mobile-link');
+  links.forEach(a => {
+    const href = (a.getAttribute('href') || '').split('/').pop();
+    if (href === path) {
+      a.classList.add('active');
+    }
+  });
+})();
 
 /* ============================================
    HAMBURGER MENU
    ============================================ */
-const hamburger = document.getElementById('hamburger');
+const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-const mobileLinks = document.querySelectorAll('.mobile-link');
 
-let menuOpen = false;
+if (hamburger && mobileMenu) {
+  let menuOpen = false;
 
-function toggleMenu(forceClose = false) {
-  menuOpen = forceClose ? false : !menuOpen;
+  function toggleMenu(forceClose) {
+    menuOpen = forceClose ? false : !menuOpen;
+    hamburger.classList.toggle('open', menuOpen);
+    mobileMenu.classList.toggle('open', menuOpen);
+    hamburger.setAttribute('aria-expanded', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  }
 
-  hamburger.classList.toggle('open', menuOpen);
-  mobileMenu.classList.toggle('open', menuOpen);
-  hamburger.setAttribute('aria-expanded', menuOpen);
+  hamburger.addEventListener('click', () => toggleMenu());
 
-  // Prevent body scroll when menu is open
-  document.body.style.overflow = menuOpen ? 'hidden' : '';
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(true));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menuOpen) toggleMenu(true);
+  });
 }
 
-hamburger.addEventListener('click', () => toggleMenu());
-
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => toggleMenu(true));
-});
-
-// Close menu on Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menuOpen) toggleMenu(true);
-});
-
 /* ============================================
-   SCROLL REVEAL (Intersection Observer)
+   SCROLL REVEAL
    ============================================ */
 const revealEls = document.querySelectorAll('.reveal');
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        // Stagger siblings within same parent
-        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal:not(.visible)'));
-        const idx = siblings.indexOf(entry.target);
-
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, idx * 60);
-
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
-
-revealEls.forEach(el => revealObserver.observe(el));
-
-/* ============================================
-   SMOOTH SECTION TRANSITIONS (nav active state)
-   ============================================ */
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
+if (revealEls.length) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.style.color = link.getAttribute('href') === `#${id}`
-            ? 'var(--white)'
-            : '';
-        });
-      }
+      if (!entry.isIntersecting) return;
+      const siblings = Array.from(
+        entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')
+      );
+      const idx = siblings.indexOf(entry.target);
+      setTimeout(() => entry.target.classList.add('visible'), idx * 55);
+      observer.unobserve(entry.target);
     });
-  },
-  { threshold: 0.4 }
-);
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-sections.forEach(section => sectionObserver.observe(section));
+  revealEls.forEach(el => observer.observe(el));
+}
 
 /* ============================================
-   CUSTOM CURSOR (Desktop)
+   MAIN FADE-IN (non-loader pages)
    ============================================ */
-const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
-
-if (!isTouchDevice()) {
-  const cursor = document.createElement('div');
-  cursor.className = 'cursor';
-  document.body.appendChild(cursor);
-
-  let mouseX = 0, mouseY = 0;
-  let curX = 0, curY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateCursor() {
-    curX += (mouseX - curX) * 0.18;
-    curY += (mouseY - curY) * 0.18;
-    cursor.style.left = curX + 'px';
-    cursor.style.top = curY + 'px';
-    requestAnimationFrame(animateCursor);
-  }
-
-  animateCursor();
-
-  // Expand cursor on interactive elements
-  const interactiveEls = document.querySelectorAll('a, button, .skill-card, .project-card, .timeline-item');
-  interactiveEls.forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
-  });
-
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '0';
-  });
-
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '1';
+const mainEl = document.getElementById('main');
+if (mainEl) {
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => mainEl.classList.add('visible'));
   });
 }
 
@@ -226,10 +164,3 @@ if (!isTouchDevice()) {
    ============================================ */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-/* ============================================
-   INIT
-   ============================================ */
-document.addEventListener('DOMContentLoaded', () => {
-  runLoader();
-});

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Newton Brian Nyongesa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">NBN.</a>
+      <ul class="nav-links">
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="skills.html"     class="nav-link">Skills</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html"   class="nav-link">Projects</a></li>
+        <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li><a href="education.html"  class="nav-link">Education</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="about.html"      class="mobile-link">About</a></li>
+      <li><a href="skills.html"     class="mobile-link">Skills</a></li>
+      <li><a href="experience.html" class="mobile-link">Experience</a></li>
+      <li><a href="projects.html"   class="mobile-link">Projects</a></li>
+      <li><a href="leadership.html" class="mobile-link">Leadership</a></li>
+      <li><a href="education.html"  class="mobile-link">Education</a></li>
+      <li><a href="contact.html"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main id="main" style="padding-top: var(--nav-h);">
+    <section class="section">
+      <div class="container">
+        <div class="section-label reveal">04 / Projects</div>
+        <h1 class="section-heading reveal">Key Personal Projects</h1>
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <div class="project-index">01</div>
+            <div class="project-tech">Neo4j · Python</div>
+            <h2>SecureMe</h2>
+            <p class="project-sub">Criminal Analysis Platform</p>
+            <p>Advanced graph database system for law enforcement network analysis. Engineered real-time relationship mapping and predictive analytics to provide actionable security insights.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">02</div>
+            <div class="project-tech">Compliance · Real-time</div>
+            <h2>SafetyAro</h2>
+            <p class="project-sub">Food Safety Management System</p>
+            <p>Comprehensive compliance platform featuring real-time safety monitoring and automated reporting for food industry standards.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">03</div>
+            <div class="project-tech">Flutter · Firebase · WebRTC</div>
+            <h2>HeartCall</h2>
+            <p class="project-sub">Emergency Response Mobile App</p>
+            <p>Medical emergency coordination system with real-time GPS tracking and WebRTC for immediate first-responder communication.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">04</div>
+            <div class="project-tech">Unity · C# · AI</div>
+            <h2>Urban Rush</h2>
+            <p class="project-sub">3D Simulation Game</p>
+            <p>Simulation game with advanced physics engine and AI pathfinding, showcasing systems programming and game development capabilities.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Newton Brian Nyongesa &copy; <span id="year"></span></p>
+        <p class="footer-sub">Software Engineer · Social Impact Technologist · CEO</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="transition.js"></script>
+</body>
+</html>

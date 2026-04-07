@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newton Brian Nyongesa</title>
+  <title>Education — Newton Brian Nyongesa</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- LOADER -->
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="loader-text"><span class="loader-name" id="loaderName">N</span></div>
-      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
-      <div class="loader-sub" id="loaderSub">Initializing...</div>
-    </div>
-    <div class="loader-grid"></div>
-  </div>
-
-  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">NBN.</a>
@@ -37,7 +26,6 @@
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="about.html"      class="mobile-link">About</a></li>
@@ -50,24 +38,35 @@
     </ul>
   </div>
 
-  <!-- HERO -->
-  <main id="main" class="visible">
-    <section class="hero-section">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-content">
-        <div class="hero-tag fade-in-item">Software Engineer · Social Impact Technologist · CEO</div>
-        <h1 class="hero-name fade-in-item">Newton<br/>Brian<br/>Nyongesa</h1>
-        <p class="hero-location fade-in-item">Nairobi, Kenya</p>
-        <div class="hero-cta fade-in-item">
-          <a href="about.html"   class="btn-primary">Explore</a>
-          <a href="contact.html" class="btn-ghost">Contact</a>
+  <main id="main" style="padding-top: var(--nav-h);">
+    <section class="section">
+      <div class="container">
+        <div class="section-label reveal">06 / Education</div>
+        <h1 class="section-heading reveal">Academic Background</h1>
+        <div class="edu-grid">
+
+          <div class="edu-card reveal">
+            <div class="edu-year">2021 – Present</div>
+            <h2>Bachelor of Informatics &amp; Computer Science</h2>
+            <p class="edu-institution">Strathmore University</p>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-year">2016 – 2021</div>
+            <h2>Kenya Certificate of Secondary Education</h2>
+            <p class="edu-institution">Alliance High School</p>
+          </div>
+
         </div>
       </div>
-      <div class="hero-scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Newton Brian Nyongesa &copy; <span id="year"></span></p>
+        <p class="footer-sub">Software Engineer · Social Impact Technologist · CEO</p>
+      </div>
+    </footer>
   </main>
 
   <script src="script.js"></script>

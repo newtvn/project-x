@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Newton Brian Nyongesa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">NBN.</a>
+      <ul class="nav-links">
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="skills.html"     class="nav-link">Skills</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html"   class="nav-link">Projects</a></li>
+        <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li><a href="education.html"  class="nav-link">Education</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="about.html"      class="mobile-link">About</a></li>
+      <li><a href="skills.html"     class="mobile-link">Skills</a></li>
+      <li><a href="experience.html" class="mobile-link">Experience</a></li>
+      <li><a href="projects.html"   class="mobile-link">Projects</a></li>
+      <li><a href="leadership.html" class="mobile-link">Leadership</a></li>
+      <li><a href="education.html"  class="mobile-link">Education</a></li>
+      <li><a href="contact.html"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main id="main" style="padding-top: var(--nav-h);">
+    <section class="section">
+      <div class="container">
+        <div class="section-label reveal">01 / About</div>
+        <h1 class="section-heading reveal">Who I Am</h1>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Full-Stack Software Engineer, UI/UX Designer, and technology entrepreneur with a track record spanning enterprise software, civic tech, and pan-African social impact.</p>
+            <p>CEO of <span class="highlight">Prolithica</span> and Co-Founder of <span class="highlight">Word &amp; Learn</span>, an AI-driven EdTech platform. Co-Founder of <span class="highlight">AI4AFRICA</span>, a pan-African NGO advancing equitable AI access and literacy.</p>
+            <p>Systems Consultant to the <span class="highlight">Parliamentary Budget Office</span> and Head of Technical for the <span class="highlight">African Network of Parliamentary Budget Offices (ANPBO)</span>. Lead UI/UX Designer for <span class="highlight">UNICEF's OpenCHS</span> project, with successful deployments across 5 countries supporting critical child protection services.</p>
+            <p>Expert in leveraging modern web technologies and AI/ML to solve complex developmental challenges in emerging markets.</p>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Countries Impacted</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Companies Founded</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Hackathon Competitors Beaten</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Technologies Mastered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Newton Brian Nyongesa &copy; <span id="year"></span></p>
+        <p class="footer-sub">Software Engineer · Social Impact Technologist · CEO</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="transition.js"></script>
+</body>
+</html>
