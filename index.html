@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newton Brian Nyongesa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-text">
+        <span class="loader-name" id="loaderName">N</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-sub" id="loaderSub">Initializing...</div>
+    </div>
+    <div class="loader-grid"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">NBN<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#leadership" class="nav-link">Leadership</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#leadership" class="mobile-link">Leadership</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="hidden">
+
+    <!-- HERO -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-content">
+        <div class="hero-tag fade-in-item">Software Engineer · Social Impact Technologist · CEO</div>
+        <h1 class="hero-name fade-in-item">
+          Newton<br/>Brian<br/>Nyongesa
+        </h1>
+        <p class="hero-location fade-in-item">Nairobi, Kenya</p>
+        <div class="hero-cta fade-in-item">
+          <a href="#about" class="btn-primary">Explore</a>
+          <a href="#contact" class="btn-ghost">Contact</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-label reveal">01 / About</div>
+        <h2 class="section-heading reveal">Who I Am</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Full-Stack Software Engineer, UI/UX Designer, and technology entrepreneur with a track record spanning enterprise software, civic tech, and pan-African social impact.</p>
+            <p>CEO of <span class="highlight">Prolithica</span> and Co-Founder of <span class="highlight">Word &amp; Learn</span>, an AI-driven EdTech platform. Co-Founder of <span class="highlight">AI4AFRICA</span>, a pan-African NGO advancing equitable AI access and literacy.</p>
+            <p>Systems Consultant to the <span class="highlight">Parliamentary Budget Office</span> and Head of Technical for the <span class="highlight">African Network of Parliamentary Budget Offices (ANPBO)</span>. Lead UI/UX Designer for <span class="highlight">UNICEF's OpenCHS</span> project, with successful deployments across 5 countries supporting critical child protection services.</p>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Countries Impacted</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Companies Founded</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Hackathon Competitors Beaten</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Technologies Mastered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-label reveal">02 / Skills</div>
+        <h2 class="section-heading reveal">Technical Expertise</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ PL ]</span>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">JavaScript (ES6+)</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">PHP</span>
+              <span class="tag">C++</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ AI ]</span>
+              <h3>AI / ML &amp; Data</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">LoRA Fine-tuning</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ BE ]</span>
+              <h3>Backend &amp; Databases</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Django REST</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Neo4j</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ FE ]</span>
+              <h3>Frontend &amp; UI/UX</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Adobe Suite</span>
+              <span class="tag">Material-UI</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ CL ]</span>
+              <h3>Cloud &amp; DevOps</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Netlify</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">GraphQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon">[ MO ]</span>
+              <h3>Mobile &amp; Other</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">React Native</span>
+              <span class="tag">PWA</span>
+              <span class="tag">Unity (C#)</span>
+              <span class="tag">Blender</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-label reveal">03 / Experience</div>
+        <h2 class="section-heading reveal">Professional Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">2024 – Present</span>
+                <span class="timeline-company">Prolithica Technologies</span>
+              </div>
+              <h3 class="timeline-role">Chief Executive Officer</h3>
+              <ul>
+                <li>Leading strategy, product development, and client operations at Prolithica, delivering enterprise-grade software solutions.</li>
+                <li>Driving business development, strategic partnerships, and go-to-market execution across regional tech markets.</li>
+                <li>Overseeing engineering teams building scalable, high-impact digital products across diverse client verticals.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Oct 2024 – Present</span>
+                <span class="timeline-company">Word &amp; Learn</span>
+              </div>
+              <h3 class="timeline-role">CEO &amp; Co-Founder</h3>
+              <ul>
+                <li>Architected an AI-powered EdTech platform utilizing LoRA fine-tuning for personalized learning experiences.</li>
+                <li>Led strategic planning and technical architecture, managing cross-functional teams.</li>
+                <li>Spearheaded all UI/UX design initiatives to ensure a user-centric and inclusive platform.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Sept 2025 – Present</span>
+                <span class="timeline-company">BITZ-ITC</span>
+              </div>
+              <h3 class="timeline-role">Project Manager – ICTA-KDEAP</h3>
+              <ul>
+                <li>Managing the ICTA Kenya Digital Economy Acceleration Programme (KDEAP) project as a short-term consultant.</li>
+                <li>Coordinating project timelines, deliverables, and multi-stakeholder communications.</li>
+                <li>Liaising with ICTA and partner organisations to align milestones with national digital economy policy priorities.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">2023 – Present</span>
+                <span class="timeline-company">BITZ-ITC / UNICEF</span>
+              </div>
+              <h3 class="timeline-role">Lead UI/UX Designer &amp; Frontend Developer</h3>
+              <ul>
+                <li>Sole designer and frontend developer for the OpenCHS child helpline system — a critical social impact platform.</li>
+                <li>Facilitated deployment across 5 countries: Tanzania, Kenya, Lesotho, Uganda &amp; Somalia.</li>
+                <li>Collaborated with international development teams to ensure accessibility and cultural sensitivity.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Ongoing</span>
+                <span class="timeline-company">Parliamentary Budget Office</span>
+              </div>
+              <h3 class="timeline-role">Systems Consultant</h3>
+              <ul>
+                <li>Provided technical advisory and systems architecture consultation for fiscal analysis and budget reporting infrastructure.</li>
+                <li>Delivered architectural recommendations, implementation roadmaps, and technical documentation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Ongoing</span>
+                <span class="timeline-company">ANPBO</span>
+              </div>
+              <h3 class="timeline-role">Head of Technical</h3>
+              <ul>
+                <li>Lead technical strategy, systems architecture, and digital infrastructure for the pan-African parliamentary budget network.</li>
+                <li>Overseeing shared platforms enabling collaboration and data exchange across member offices.</li>
+                <li>Establishing interoperability and data standards across African nations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Ongoing</span>
+                <span class="timeline-company">GoalFusion</span>
+              </div>
+              <h3 class="timeline-role">Systems Architect</h3>
+              <ul>
+                <li>Designed scalable system architecture for GoalFusion's goal-tracking and productivity platform.</li>
+                <li>Defined technical standards, API design patterns, and data modelling strategies.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Feb 2024 – Oct 2024</span>
+                <span class="timeline-company">Beats by Dre</span>
+              </div>
+              <h3 class="timeline-role">Market Research Analyst (External)</h3>
+              <ul>
+                <li>Analyzed complex statistical data and market trends to inform strategic product decisions for executive leadership.</li>
+                <li>Developed analytical frameworks for consumer behavior insights and market intelligence.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Feb 2024 – Dec 2024</span>
+                <span class="timeline-company">Sky World Limited</span>
+              </div>
+              <h3 class="timeline-role">Full-Stack Development Intern</h3>
+              <ul>
+                <li>Developed responsive web applications and built RESTful APIs using modern frameworks.</li>
+                <li>Collaborated on scalable software solutions while maintaining rigorous code quality standards.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NGO -->
+    <section id="ngo" class="section">
+      <div class="container">
+        <div class="section-label reveal">03b / Civil Society</div>
+        <h2 class="section-heading reveal">NGO &amp; Social Impact</h2>
+        <div class="ngo-card reveal">
+          <div class="ngo-header">
+            <span class="ngo-badge">Co-Founder</span>
+            <span class="ngo-period">Pan-African</span>
+          </div>
+          <h3>AI4AFRICA</h3>
+          <p>Co-founded a pan-African NGO advancing AI literacy, ethics, and equitable technology access across the African continent. Driving strategic partnerships with regional institutions, governments, and international development organisations. Building programmes to democratise AI education and create pathways for African talent in the global AI economy.</p>
+          <a href="https://ai4africa.foundation" class="ngo-link" target="_blank" rel="noopener">ai4africa.foundation →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-label reveal">04 / Projects</div>
+        <h2 class="section-heading reveal">Key Personal Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <div class="project-index">01</div>
+            <div class="project-tech">Neo4j · Python</div>
+            <h3>SecureMe</h3>
+            <p class="project-sub">Criminal Analysis Platform</p>
+            <p>Advanced graph database system for law enforcement network analysis. Engineered real-time relationship mapping and predictive analytics to provide actionable security insights.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">02</div>
+            <div class="project-tech">Compliance · Real-time</div>
+            <h3>SafetyAro</h3>
+            <p class="project-sub">Food Safety Management System</p>
+            <p>Comprehensive compliance platform featuring real-time safety monitoring and automated reporting for food industry standards.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">03</div>
+            <div class="project-tech">Flutter · Firebase · WebRTC</div>
+            <h3>HeartCall</h3>
+            <p class="project-sub">Emergency Response Mobile App</p>
+            <p>Medical emergency coordination system with real-time GPS tracking and WebRTC for immediate first-responder communication.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-index">04</div>
+            <div class="project-tech">Unity · C# · AI</div>
+            <h3>Urban Rush</h3>
+            <p class="project-sub">3D Simulation Game</p>
+            <p>Simulation game with advanced physics engine and AI pathfinding, showcasing systems programming and game development capabilities.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <div class="section-label reveal">05 / Leadership</div>
+        <h2 class="section-heading reveal">Achievements &amp; Recognition</h2>
+        <div class="leadership-list">
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 01 ]</div>
+            <div>
+              <h3>Senate Vice Chairperson</h3>
+              <p>Strathmore University Academic Senate — Lead student governance and established the "Elimisha" scholarship program.</p>
+            </div>
+          </div>
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 02 ]</div>
+            <div>
+              <h3>Technical Project Manager | SCESA</h3>
+              <p>Coordinated technical initiatives for 500+ students and managed partnerships with Microsoft, Intel, and UiPath.</p>
+            </div>
+          </div>
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 03 ]</div>
+            <div>
+              <h3>Oracle Hackathon Runner-Up (2024)</h3>
+              <p>2nd Place in East &amp; Central Africa out of 500+ participants — Advanced Cloud Development.</p>
+            </div>
+          </div>
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 04 ]</div>
+            <div>
+              <h3>National Research Fund Finalist (2024)</h3>
+              <p>Top 10 nationwide for AI-powered solutions in youth education.</p>
+            </div>
+          </div>
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 05 ]</div>
+            <div>
+              <h3>A2SV Hackathon Semi-Finalist (2024)</h3>
+              <p>Top 50 in Africa for AI-driven agricultural optimization.</p>
+            </div>
+          </div>
+
+          <div class="leadership-item reveal">
+            <div class="leadership-icon">[ 06 ]</div>
+            <div>
+              <h3>Microsoft Learn Student Ambassador (2023)</h3>
+              <p>Recognized for leadership in Azure and Cloud Computing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-label reveal">06 / Education</div>
+        <h2 class="section-heading reveal">Academic Background</h2>
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <div class="edu-year">2021 – Present</div>
+            <h3>Bachelor of Informatics &amp; Computer Science</h3>
+            <p class="edu-institution">Strathmore University</p>
+          </div>
+          <div class="edu-card reveal">
+            <div class="edu-year">2016 – 2021</div>
+            <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+            <p class="edu-institution">Alliance High School</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label reveal">07 / Contact</div>
+        <h2 class="section-heading reveal">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-item reveal">
+            <span class="contact-label">Email</span>
+            <a href="mailto:newtvnbrian@gmail.com" class="contact-value">newtvnbrian@gmail.com</a>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/newtvn" class="contact-value" target="_blank" rel="noopener">github.com/newtvn</a>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-label">Portfolio</span>
+            <a href="https://newtvn.com" class="contact-value" target="_blank" rel="noopener">newtvn.com</a>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/newton-brian-nyongesa" class="contact-value" target="_blank" rel="noopener">Newton Brian Nyongesa</a>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Nairobi, Kenya</span>
+          </div>
+        </div>
+        <div class="contact-refs reveal">
+          <p class="refs-title">Professional References</p>
+          <p>Anthony Kahindi — Senior Mentor &amp; Academic Advisor, Strathmore University: <a href="mailto:akahindi@strathmore.edu">akahindi@strathmore.edu</a></p>
+          <p>Dr. Barasa Davis — Lecturer, TUK &amp; Strathmore University: <a href="mailto:dbarasa@strathmore.edu">dbarasa@strathmore.edu</a></p>
+          <p>UNICEF Project Coordinator — BITZ-ITC OpenCHS Project: Available upon request</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>Newton Brian Nyongesa &copy; <span id="year"></span></p>
+        <p class="footer-sub">Software Engineer · Social Impact Technologist · CEO</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
